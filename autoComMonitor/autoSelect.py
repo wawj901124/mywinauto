@@ -6,34 +6,43 @@ from pywinauto.keyboard import send_keys #对键盘操作
 from autoComMonitor.common import AutoCommon
 from autoComMonitor.config.commonConfig import CommonConfig
 
-
-class HandleSendText(object):
-    def __init__(self,app_windows,select_control_name,select_list,select_option,split_flag,split_list_index):
+class HandleClick(object):
+    def __init__(self,app_windows,click_control_name):
+        self.auto_common = AutoCommon()
         #应用窗口
         self.APP_WINDOWS = app_windows
-        #选项的定位
-        self.SELECT_CONTROL_NAME = select_control_name
-        #选项的列表
-        self.SELECT_LIST = select_list
-        #预期要选择的项
-        self.SELECT_COM_NUM =select_option
+        #控件的定位
+        self.CLICK_CONTROL_NAME = click_control_name
+
+    #处理点击
+    def handle_click(self):
+        self.auto_common.time_delay(1)
+        #获取文本控件
+        edit_control = self.APP_WINDOWS[self.CLICK_CONTROL_NAME]
+        #点击
+        edit_control.click()
+        self.auto_common.time_delay(1)
+
+
+
+class HandleSendText(object):
+    def __init__(self,app_windows,edit_control_name,input_text):
         self.auto_common = AutoCommon()
-        #选项内容分隔符号
-        self.SPLIT_FLAG = split_flag
-        #选项内容为分割后的第几项
-        self.SPLIT_LIST_INDEX = split_list_index
+        #应用窗口
+        self.APP_WINDOWS = app_windows
+        #控件的定位
+        self.EDIT_CONTROL_NAME = edit_control_name
+        #文字编辑区要输入的内容
+        self.INPUT_TEXT = input_text
+
 
 
     #处理发送数据
     def handle_send_text(self):
         #获取文本控件
-        edit_control = self.APP_WINDOWS[self.SELECT_CONTROL_NAME]
-
-
+        edit_control = self.APP_WINDOWS[self.EDIT_CONTROL_NAME]
         #输入内容
-        pass
-
-
+        edit_control.type_keys(self.INPUT_TEXT)
 
 
 class HandleSelect(object):
@@ -191,14 +200,38 @@ class AutoSelectCom(object):
         hs = HandleSelect(app_windows,select_control_name,select_list,select_option,split_flag,split_list_index)
         hs.handle_select()
 
+    def handle_send_text_sdfsone(self):
+        app_windows = self.APP_WINDOWS
+        edit_control_name = "手动发送Edit1"
+        input_text = "nihao"
+        ht = HandleSendText(app_windows,edit_control_name,input_text)
+        ht.handle_send_text()
+
+    def handle_click_qikongone(self):
+        app_windows = self.APP_WINDOWS
+        click_control_name = "清空Button1"
+        hc =  HandleClick(app_windows,click_control_name)
+        hc.handle_click()
+
+    def handle_click_shoudongfasongone(self):
+        app_windows = self.APP_WINDOWS
+        click_control_name = "手动发送Button1"
+        hc =  HandleClick(app_windows,click_control_name)
+        hc.handle_click()
+
+
 
 
     def run_man(self):
-        self.handle_select_com()
-        self.handle_select_botelv()
-        self.handle_select_shujuwei()
-        self.handle_select_jiaoyanwei()
-        self.handle_select_tingzhiwei()
+        # self.handle_select_com()
+        # self.handle_select_botelv()
+        # self.handle_select_shujuwei()
+        # self.handle_select_jiaoyanwei()
+        # self.handle_select_tingzhiwei()
+        self.handle_click_qikongone()
+        self.handle_send_text_sdfsone()
+        self.handle_click_shoudongfasongone()
+        self.handle_click_qikongone()
 
 
 if __name__ == "__main__":
