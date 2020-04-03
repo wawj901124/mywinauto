@@ -8,6 +8,7 @@ SELECT_COM_NUM="COM1"
 
 
 app = Application().start(EXE_NAME)  #打开程序
+app.window()
 time.sleep(3)
 win_ckts = app[CHENGXU_NAME]   #打开程序窗口
 time.sleep(3)
@@ -54,7 +55,7 @@ elif pre_select_com_num_int > now_select_com_num_int:  #如果预期比实际大
     cha = pre_select_com_num_int - now_select_com_num_int
     print(cha)
     print("即将点击")
-    select_com.click()
+    select_com.click
     # select_com.texts
     print("已经点击")
     for i in range(0,cha):

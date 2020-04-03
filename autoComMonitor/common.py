@@ -21,6 +21,13 @@ class AutoCommon(object):
         print(control_text)
         return control_text
 
+    # 获取控件文本内容，通过get_properties()属性中的texts,使用此属性获取到的选项内容的texts的内容为选项的内容，不是选中的内容
+    def get_Control_Text_By_Properties(self,control):
+        # 获取当前端口选择内容的文本信息
+        control_text =control.get_properties()["texts"]
+        print(control_text)
+        return control_text
+
     def cha_click(self,cha,keyvalue):
         for i in range(0, cha):
             send_keys(keyvalue)  # 按向上键
