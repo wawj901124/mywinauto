@@ -126,15 +126,22 @@ class HandleSelect(object):
         pre_select_com_num_int = 0
 
         #获取目前的选项位置
-        select_list_len = len(self.SELECT_LIST)
+        select_list = self.auto_common.get_Control_Text_By_Properties(select_com)
+        #删除列表第一项，因为第一项为选中的项
+        del select_list[0]
+
+        print("select_list:")
+        print(select_list)
+        select_list_len = len(select_list)
+        # select_list_len = len(self.SELECT_LIST)
         for i in range(0,select_list_len):
-            if select_com_text == self.SELECT_LIST[i]:
+            if select_com_text == select_list[i]:
                 now_select_com_num_int = i
                 break
 
         #获取预期选项的位置
         for i in range(0,select_list_len):
-            if pre_select_com_text == self.SELECT_LIST[i]:
+            if pre_select_com_text == select_list[i]:
                 pre_select_com_num_int = i
                 break
 
@@ -360,10 +367,10 @@ class AutoSelectCom(object):
         # self.is_exist_error_dialog()
         # self.click_error_confirm()
         self.handle_select_com()
-        # self.handle_select_botelv()
-        # self.handle_select_shujuwei()
-        # self.handle_select_jiaoyanwei()
-        # self.handle_select_tingzhiwei()
+        self.handle_select_botelv()
+        self.handle_select_shujuwei()
+        self.handle_select_jiaoyanwei()
+        self.handle_select_tingzhiwei()
         # self.handle_click_qikongone()
         # self.handle_send_text_sdfsone()
         # self.handle_click_shoudongfasongone()
