@@ -395,19 +395,6 @@ class AutoSelectCom(object):
 
 
 
-
-
-    @staticmethod  # 根据不同的参数生成测试用例
-    def getTestFunc(edit_control_name,input_text):
-
-        def func(self):
-            self.handle_receive_text_wai(edit_control_name,input_text)
-
-        return func
-
-
-
-
     def close_app(self):
         self.APP.kill()
 
@@ -446,44 +433,8 @@ class AutoSelectCom(object):
         # self.handle_receive_text()
 
 
-# def __generateTestCases():
-#     f = open("zhushou", "r", encoding="utf8")
-#     f_context = f.read()
-#     f_context_list = f_context.split("\n")
-#     f_context_list_len = len(f_context_list)
-#     all_list = []
-#     for i in f_context_list:
-#         if "edit" in i.lower():
-#             if "[" in i:
-#                 end = i.split("|")[1]
-#                 # print(end)
-#                 # print(type(end))
-#                 new_end = eval(end)  # 将字符串类型转为列表类型
-#                 print(new_end)
-#                 # print(type(new_end))
-#                 for j in new_end:
-#                     all_list.append(j)
-#
-#     print(all_list)
-#
-#     for i in all_list:
-#         try:
-#             args = []
-#             args.append(i)
-#             args.append(str(i))
-#             autos = AutoSelectCom()
-#             autos. handle_receive_text_wai(*args)
-#         except:
-#             continue
-#
-#
-#
-#         # setattr(AutoSelectCom,
-#         #         'test_func_%s' % (i),
-#         #         AutoSelectCom.getTestFunc(*args))  # 通过setattr自动为TestCase类添加成员方法，方法以“test_func_”开头
-
 if __name__ == "__main__":
     autos = AutoSelectCom()
     autos.handle_receive_text()
-    # __generateTestCases()
+
 
