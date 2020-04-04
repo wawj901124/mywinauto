@@ -349,6 +349,62 @@ class AutoSelectCom(object):
         hc =  HandleCheck(app_windows,click_control_name)
         hc.handle_check()
 
+    #处理接受内容定位
+    def handle_receive_text(self):
+        app_windows = self.APP_WINDOWS
+        edit_control_name = "发帧数RICHEDIT"
+        input_text = "jieshouzijie"
+        ht = HandleSendText(app_windows,edit_control_name,input_text)
+        ht.handle_send_text()
+
+    #处理选择发送去1_手动发送编辑内容,waican
+    def handle_receive_text_wai(self):
+        app_windows = self.APP_WINDOWS
+        # edit_control_name = "Edit"
+        # input_text = "jieshouzijie"
+        f = open("zhushou", "r", encoding="utf8")
+        f_context = f.read()
+        f_context_list = f_context.split("\n")
+        f_context_list_len = len(f_context_list)
+        all_list = []
+        for i in f_context_list:
+            if "edit" in i.lower():
+                if "[" in i:
+                    end = i.split("|")[1]
+                    # print(end)
+                    # print(type(end))
+                    new_end = eval(end)  # 将字符串类型转为列表类型
+                    print(new_end)
+                    # print(type(new_end))
+                    for j in new_end:
+                        all_list.append(j)
+
+        print(all_list)
+
+        for i in all_list:
+            try:
+                edit_control_name=i
+                input_text = str(i)
+                ht = HandleSendText(app_windows, edit_control_name, input_text)
+                ht.handle_send_text()
+                print("------------------输入内容----------------------")
+                edit_control = self.APP_WINDOWS[edit_control_name]
+                self.auto_common.get_Control_Text(edit_control, "'", 1)
+            except:
+                continue
+
+
+
+
+
+    @staticmethod  # 根据不同的参数生成测试用例
+    def getTestFunc(edit_control_name,input_text):
+
+        def func(self):
+            self.handle_receive_text_wai(edit_control_name,input_text)
+
+        return func
+
 
 
 
@@ -357,7 +413,7 @@ class AutoSelectCom(object):
 
 
     def run_man(self):
-        # pass
+        pass
         # self.get_app_windows()
         # self.show_error_windows()
         # self.time_delay(5)
@@ -366,11 +422,11 @@ class AutoSelectCom(object):
         # self.time_delay(5)
         # self.is_exist_error_dialog()
         # self.click_error_confirm()
-        self.handle_select_com()
-        self.handle_select_botelv()
-        self.handle_select_shujuwei()
-        self.handle_select_jiaoyanwei()
-        self.handle_select_tingzhiwei()
+        # self.handle_select_com()
+        # self.handle_select_botelv()
+        # self.handle_select_shujuwei()
+        # self.handle_select_jiaoyanwei()
+        # self.handle_select_tingzhiwei()
         # self.handle_click_qikongone()
         # self.handle_send_text_sdfsone()
         # self.handle_click_shoudongfasongone()
@@ -381,17 +437,53 @@ class AutoSelectCom(object):
         # self.handle_send_and_receive_config()
         # print("-------------------------------------------------")
         # self.time_delay(5)
-        self.handle_send_and_receive_config()
-        self.handle_send_text_sdfsone()
-        self.handle_click_shoudongfasongone()
+        # self.handle_send_and_receive_config()
+        # self.handle_send_text_sdfsone()
+        # self.handle_click_shoudongfasongone()
 
         # self.show_son_control()
         # self.close_app()
+        # self.handle_receive_text()
 
 
-
+# def __generateTestCases():
+#     f = open("zhushou", "r", encoding="utf8")
+#     f_context = f.read()
+#     f_context_list = f_context.split("\n")
+#     f_context_list_len = len(f_context_list)
+#     all_list = []
+#     for i in f_context_list:
+#         if "edit" in i.lower():
+#             if "[" in i:
+#                 end = i.split("|")[1]
+#                 # print(end)
+#                 # print(type(end))
+#                 new_end = eval(end)  # 将字符串类型转为列表类型
+#                 print(new_end)
+#                 # print(type(new_end))
+#                 for j in new_end:
+#                     all_list.append(j)
+#
+#     print(all_list)
+#
+#     for i in all_list:
+#         try:
+#             args = []
+#             args.append(i)
+#             args.append(str(i))
+#             autos = AutoSelectCom()
+#             autos. handle_receive_text_wai(*args)
+#         except:
+#             continue
+#
+#
+#
+#         # setattr(AutoSelectCom,
+#         #         'test_func_%s' % (i),
+#         #         AutoSelectCom.getTestFunc(*args))  # 通过setattr自动为TestCase类添加成员方法，方法以“test_func_”开头
 
 if __name__ == "__main__":
     autos = AutoSelectCom()
-    autos.run_man()
+    autos.handle_receive_text()
+    # __generateTestCases()
 

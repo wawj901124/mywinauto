@@ -1,0 +1,433 @@
+Dialog - '串口调试软件4.5'    (L431, T195, R1489, B837)
+['Dialog', '串口调试软件4.5Dialog', '串口调试软件4.5']
+child_window(title="串口调试软件4.5", class_name="#32770")
+-----------------------------------------第一行第一列-----------------------------------------------------------
+   | GroupBox - ''    (L448, T225, R644, B439)
+   | ['端  口：GroupBox', 'GroupBox', 'GroupBox0', 'GroupBox1']
+   | child_window(class_name="Button")
+   |
+   | GroupBox - ''    (L448, T568, R1474, B703)
+   | ['保存数据GroupBox', 'GroupBox2']
+   | child_window(class_name="Button")
+   |
+   | Edit - ''    (L658, T583, R1282, B621)
+   | ['Edit', '手动发送Edit', 'Edit0', 'Edit1', '手动发送Edit0', '手动发送Edit1']
+   | child_window(class_name="Edit")
+   |
+   | GroupBox - ''    (L448, T435, R644, B572)
+   | ['GroupBox3', '发送GroupBox']
+   | child_window(class_name="Button")
+   |
+   | Static - '端  口：'    (L470, T246, R536, B261)
+   | ['端  口：', 'Static', '端  口：Static', 'Static0', 'Static1']
+   | child_window(title="端  口：", class_name="Static")
+   |
+   | Static - '波特率：'    (L466, T270, R532, B285)
+   | ['波特率：Static', 'Static2', '波特率：']
+   | child_window(title="波特率：", class_name="Static")
+   |
+   | Static - '数据位：'    (L466, T294, R532, B309)
+   | ['数据位：Static', 'Static3', '数据位：']
+   | child_window(title="数据位：", class_name="Static")
+   |
+   | Static - '校验位：'    (L466, T319, R532, B334)
+   | ['校验位：Static', 'Static4', '校验位：']
+   | child_window(title="校验位：", class_name="Static")
+   |
+   | Static - '停止位：'    (L466, T343, R532, B358)
+   | ['停止位：Static', '停止位：', 'Static5']
+   | child_window(title="停止位：", class_name="Static")
+   |
+   | ComboBox - 'COM1'    (L536, T240, R628, B263)
+   | ['端  口：ComboBox', 'ComboBox', 'ComboBox0', 'ComboBox1']
+   | child_window(title="COM1", class_name="ComboBox")
+   |
+   | ComboBox - '1200'    (L536, T264, R628, B287)
+   | ['波特率：ComboBox', 'ComboBox2']
+   | child_window(title="1200", class_name="ComboBox")
+   |
+   | ComboBox - '8'    (L536, T289, R628, B312)
+   | ['数据位：ComboBox', 'ComboBox3']
+   | child_window(title="8", class_name="ComboBox")
+   |
+   | ComboBox - '无'    (L536, T313, R628, B336)
+   | ['校验位：ComboBox', 'ComboBox4']
+   | child_window(title="无", class_name="ComboBox")
+   |
+   | ComboBox - '1'    (L536, T338, R628, B361)
+   | ['停止位：ComboBox', 'ComboBox5']
+   | child_window(title="1", class_name="ComboBox")
+   |
+   | Button - '关闭串口'    (L536, T368, R628, B394)
+   | ['Button', '关闭串口', '关闭串口Button', 'Button0', 'Button1']
+   | child_window(title="关闭串口", class_name="Button")
+-----------------------------------------第二行第二列-----------------------------------------------------------
+   |
+   | Static - ''    (L506, T373, R534, B394)
+   | ['状态Static', 'Static6', '状态Static0', '状态Static1']
+   | child_window(class_name="Static")
+   |
+   | Static - '状态'    (L468, T375, R502, B390)
+   | ['状态Static2', 'Static7', '状态']
+   | child_window(title="状态", class_name="Static")
+   |
+   | CheckBox - '关键字过滤接收'    (L662, T518, R806, B533)
+   | ['CheckBox', '关键字过滤接收CheckBox', '关键字过滤接收', 'CheckBox0', 'CheckBox1']
+   | child_window(title="关键字过滤接收", class_name="Button")
+   |
+   | Static - '关键字'    (L660, T542, R710, B557)
+   | ['关键字', 'Static8', '关键字Static', '关键字Static0', '关键字Static1']
+   | child_window(title="关键字", class_name="Static")
+   |
+   | Edit - ''    (L714, T536, R808, B562)
+   | ['关键字Edit', 'Edit2']
+   | child_window(class_name="Edit")
+-----------------------------------------第二行第一列-----------------------------------------------------------
+   | CheckBox - '16进制'    (L560, T452, R638, B471)
+   | ['16进制', 'CheckBox2', '16进制CheckBox', '16进制0', '16进制1', '16进制CheckBox0', '16进制CheckBox1']
+   | child_window(title="16进制", class_name="Button")
+   |
+   | Button - '清空接收区'    (L458, T448, R548, B474)
+   | ['Button2', '清空接收区Button', '清空接收区']
+   | child_window(title="清空接收区", class_name="Button")
+   |
+   | Button - '停止显示'    (L458, T476, R548, B502)
+   | ['停止显示', 'Button3', '停止显示Button']
+   | child_window(title="停止显示", class_name="Button")
+   |
+   | CheckBox - '自动清'    (L560, T480, R632, B499)
+   | ['自动清', 'CheckBox3', '自动清CheckBox']
+   | child_window(title="自动清", class_name="Button")
+   |
+   | Button - '保存数据'    (L458, T504, R548, B530)
+   | ['保存数据Button', '保存数据', 'Button4']
+   | child_window(title="保存数据", class_name="Button")
+   |
+   | Button - '更改文件'    (L556, T504, R636, B530)
+   | ['更改文件', 'Button5', '更改文件Button']
+   | child_window(title="更改文件", class_name="Button")
+   |
+   | Edit - 'data.txt'    (L458, T536, R636, B562)
+   | ['保存数据Edit', 'Edit3']
+   | child_window(title="data.txt", class_name="Edit")
+   |
+   | Button - '手动发送'    (L568, T589, R642, B615)
+   | ['Button6', '手动发送Button', '手动发送', '手动发送Button0', '手动发送Button1', '手动发送0', '手动发送1', 'Button60', 'Button61']
+   | child_window(title="手动发送", class_name="Button")
+-----------------------------------------第三行第一列-----------------------------------------------------------
+   | Static - '发送区1'    (L460, T596, R518, B611)
+   | ['发送区1', 'Static9', '发送区1Static']
+   | child_window(title="发送区1", class_name="Static")
+   |
+   | Button - '手动发送'    (L568, T626, R642, B652)
+   | ['Button7', '手动发送Button2', '手动发送2']
+   | child_window(title="手动发送", class_name="Button")
+   |
+   | Static - '发送区2'    (L460, T634, R518, B649)
+   | ['发送区2', '发送区2Static', 'Static10']
+   | child_window(title="发送区2", class_name="Static")
+   |
+   | Button - '手动发送'    (L568, T664, R642, B690)
+   | ['Button8', '手动发送Button3', '手动发送3']
+   | child_window(title="手动发送", class_name="Button")
+   |
+   | Static - '发送区3'    (L460, T669, R518, B684)
+   | ['发送区3', 'Static11', '发送区3Static']
+   | child_window(title="发送区3", class_name="Static")
+   |
+   | Edit - ''    (L658, T621, R1282, B659)
+   | ['Edit4', '手动发送Edit2']
+   | child_window(class_name="Edit")
+   |
+   | Edit - ''    (L658, T658, R1282, B696)
+   | ['Edit5', '手动发送Edit3']
+   | child_window(class_name="Edit")
+-----------------------------------------第四行第二、三、四列-----------------------------------------------------------
+   | GroupBox - '发送区1属性'    (L854, T709, R1054, B825)
+   | ['GroupBox4', '发送区1属性', '发送区1属性GroupBox']
+   | child_window(title="发送区1属性", class_name="Button")
+   |
+   | GroupBox - '发送区2属性'    (L1062, T709, R1262, B825)
+   | ['发送区2属性', '发送区2属性GroupBox', 'GroupBox5']
+   | child_window(title="发送区2属性", class_name="Button")
+   |
+   | GroupBox - '发送区3属性'    (L1272, T709, R1476, B825)
+   | ['发送区3属性', '发送区3属性GroupBox', 'GroupBox6']
+   | child_window(title="发送区3属性", class_name="Button")
+   |
+   | CheckBox - '帧换行'    (L662, T493, R736, B512)
+   | ['帧换行', '帧换行CheckBox', 'CheckBox4']
+   | child_window(title="帧换行", class_name="Button")
+   |
+   | CheckBox - '显示保存时间'    (L662, T471, R788, B490)
+   | ['显示保存时间', 'CheckBox5', '显示保存时间CheckBox']
+   | child_window(title="显示保存时间", class_name="Button")
+   |
+   | CheckBox - '16进制'    (L866, T737, R946, B756)
+   | ['16进制2', 'CheckBox6', '16进制CheckBox2']
+   | child_window(title="16进制", class_name="Button")
+   |
+   | CheckBox - '自动发'    (L866, T765, R946, B784)
+   | ['自动发CheckBox', 'CheckBox7', '自动发', '自动发CheckBox0', '自动发CheckBox1', '自动发0', '自动发1']
+   | child_window(title="自动发", class_name="Button")
+   |
+   | Static - '发送周期'    (L866, T795, R932, B810)
+   | ['发送周期', '发送周期Static', 'Static12', '发送周期0', '发送周期1', '发送周期Static0', '发送周期Static1']
+   | child_window(title="发送周期", class_name="Static")
+   |
+   | Edit - '1000'    (L948, T789, R1004, B815)
+   | ['发送周期Edit', 'Edit6', '参加轮发Edit', '发送周期Edit0', '发送周期Edit1', '参加轮发Edit0', '参加轮发Edit1']
+   | child_window(title="1000", class_name="Edit")
+   |
+   | GroupBox - '发送区及发送文件轮发属性'    (L448, T709, R846, B825)
+   | ['发送区及发送文件轮发属性GroupBox', '发送区及发送文件轮发属性', 'GroupBox7']
+   | child_window(title="发送区及发送文件轮发属性", class_name="Button")
+   |
+   | Static - '周期'    (L586, T737, R620, B752)
+   | ['周期', '周期Static', 'Static13']
+   | child_window(title="周期", class_name="Static")
+   |
+   | Edit - '1000'    (L628, T733, R682, B756)
+   | ['周期Edit', 'Edit7']
+   | child_window(title="1000", class_name="Edit")
+   |
+   | CheckBox - '参加轮发'    (L948, T765, R1044, B784)
+   | ['参加轮发CheckBox', '参加轮发', 'CheckBox8', '参加轮发CheckBox0', '参加轮发CheckBox1', '参加轮发0', '参加轮发1']
+   | child_window(title="参加轮发", class_name="Button")
+   |
+   | Static - 'ms'    (L1008, T795, R1026, B810)
+   | ['ms', 'Static14', 'msStatic', 'ms0', 'ms1', 'msStatic0', 'msStatic1']
+   | child_window(title="ms", class_name="Static")
+   |
+   | CheckBox - '16进制'    (L1068, T737, R1148, B756)
+   | ['16进制3', 'CheckBox9', '16进制CheckBox3']
+   | child_window(title="16进制", class_name="Button")
+   |
+   | CheckBox - '自动发'    (L1068, T765, R1148, B784)
+   | ['自动发CheckBox2', 'CheckBox10', '自动发2']
+   | child_window(title="自动发", class_name="Button")
+   |
+   | Static - '发送周期'    (L1070, T795, R1136, B810)
+   | ['发送周期2', '发送周期Static2', 'Static15']
+   | child_window(title="发送周期", class_name="Static")
+   |
+   | Edit - '1000'    (L1154, T789, R1210, B815)
+   | ['发送周期Edit2', 'Edit8', '参加轮发Edit2']
+   | child_window(title="1000", class_name="Edit")
+   |
+   | CheckBox - '参加轮发'    (L1154, T765, R1250, B784)
+   | ['参加轮发CheckBox2', '参加轮发2', 'CheckBox11']
+   | child_window(title="参加轮发", class_name="Button")
+   |
+   | Static - 'ms'    (L1214, T795, R1232, B810)
+   | ['ms2', 'Static16', 'msStatic2']
+   | child_window(title="ms", class_name="Static")
+   |
+   | CheckBox - '16进制'    (L1276, T737, R1356, B756)
+   | ['16进制4', 'CheckBox12', '16进制CheckBox4']
+   | child_window(title="16进制", class_name="Button")
+   |
+   | CheckBox - '自动发'    (L1276, T765, R1356, B784)
+   | ['自动发CheckBox3', 'CheckBox13', '自动发3']
+   | child_window(title="自动发", class_name="Button")
+   |
+   | Static - '发送周期'    (L1280, T795, R1346, B810)
+   | ['发送周期3', '发送周期Static3', 'Static17']
+   | child_window(title="发送周期", class_name="Static")
+   |
+   | Edit - '1000'    (L1362, T789, R1418, B815)
+   | ['发送周期Edit3', 'Edit9', '参加轮发Edit3']
+   | child_window(title="1000", class_name="Edit")
+   |
+   | CheckBox - '参加轮发'    (L1362, T765, R1458, B784)
+   | ['参加轮发CheckBox3', '参加轮发3', 'CheckBox14']
+   | child_window(title="参加轮发", class_name="Button")
+   |
+   | Static - 'ms'    (L1426, T795, R1444, B810)
+   | ['ms3', 'Static18', 'msStatic3']
+   | child_window(title="ms", class_name="Static")
+   |
+   | Button - '开始发送区轮发'    (L722, T788, R838, B816)
+   | ['开始发送区轮发', 'Button9', '开始发送区轮发Button']
+   | child_window(title="开始发送区轮发", class_name="Button")
+   |
+   | Button - '校验'    (L948, T733, R1042, B759)
+   | ['校验', 'Button10', '校验Button', '校验0', '校验1', '校验Button0', '校验Button1']
+   | child_window(title="校验", class_name="Button")
+   |
+   | Button - '校验'    (L1154, T733, R1238, B759)
+   | ['校验2', 'Button11', '校验Button2']
+   | child_window(title="校验", class_name="Button")
+   |
+   | Button - '校验'    (L1362, T733, R1446, B759)
+   | ['校验3', 'Button12', '校验Button3']
+   | child_window(title="校验", class_name="Button")
+   |
+   | Button - '清空'    (L522, T589, R564, B615)
+   | ['Button13', '清空', '清空Button', '清空0', '清空1', '清空Button0', '清空Button1']
+   | child_window(title="清空", class_name="Button")
+   |
+   | Button - '清空'    (L522, T626, R564, B652)
+   | ['Button14', '清空2', '清空Button2']
+   | child_window(title="清空", class_name="Button")
+   |
+   | Button - '清空'    (L522, T664, R564, B690)
+   | ['Button15', '清空3', '清空Button3']
+   | child_window(title="清空", class_name="Button")
+   |
+   | Static - 'ms'    (L686, T737, R704, B752)
+   | ['ms4', 'Static19', 'msStatic4']
+   | child_window(title="ms", class_name="Static")
+   |
+   | RadioButton - '定时'    (L650, T763, R706, B782)
+   | ['定时', 'RadioButton', '定时RadioButton', 'RadioButton0', 'RadioButton1']
+   | child_window(title="定时", class_name="Button")
+   |
+   | RadioButton - '收到回答后发下一帧'    (L460, T767, R630, B786)
+   | ['收到回答后发下一帧RadioButton', '收到回答后发下一帧', 'RadioButton2']
+   | child_window(title="收到回答后发下一帧", class_name="Button")
+   |
+   | RICHEDIT - ''    (L824, T233, R1474, B572)
+   | ['发帧数RICHEDIT', 'RICHEDIT']
+   | child_window(class_name="RICHEDIT")
+   |
+   | Static - ''    (L508, T399, R570, B414)
+   | ['发送Static', 'Static20', '发送Static0', '发送Static1']
+   | child_window(class_name="Static")
+   |
+   | Button - '选择发送文件'    (L722, T728, R838, B756)
+   | ['选择发送文件Button', 'Button16', '选择发送文件']
+   | child_window(title="选择发送文件", class_name="Button")
+   |
+   | Button - '开始文件轮发'    (L722, T758, R838, B786)
+   | ['Button17', '开始文件轮发', '开始文件轮发Button']
+   | child_window(title="开始文件轮发", class_name="Button")
+   |
+   | GroupBox - ''    (L652, T435, R816, B572)
+   | ['当前发送行GroupBox', 'GroupBox8']
+   | child_window(class_name="Button")
+   |
+   | Static - '发帧数'    (L664, T248, R714, B263)
+   | ['发帧数', 'Static21', '发帧数Static']
+   | child_window(title="发帧数", class_name="Static")
+   |
+   | Edit - ''    (L742, T246, R806, B269)
+   | ['发帧数Edit', 'Edit10']
+   | child_window(class_name="Edit")
+   |
+   | Static - '收帧数'    (L664, T296, R714, B311)
+   | ['收帧数Static', 'Static22', '收帧数']
+   | child_window(title="收帧数", class_name="Static")
+   |
+   | Edit - ''    (L742, T296, R806, B319)
+   | ['收帧数Edit', 'Edit11']
+   | child_window(class_name="Edit")
+   |
+   | Static - '发字节数'    (L664, T272, R730, B287)
+   | ['发字节数', 'Static23', '发字节数Static']
+   | child_window(title="发字节数", class_name="Static")
+   |
+   | Edit - ''    (L742, T274, R806, B297)
+   | ['发字节数Edit', 'Edit12']
+   | child_window(class_name="Edit")
+   |
+   | Static - '收字节数'    (L664, T323, R730, B338)
+   | ['收字节数', 'Static24', '收字节数Static']
+   | child_window(title="收字节数", class_name="Static")
+   |
+   | Edit - ''    (L742, T323, R806, B346)
+   | ['收字节数Edit', 'Edit13']
+   | child_window(class_name="Edit")
+   |
+   | CheckBox - '显示保存发送'    (L662, T448, R790, B467)
+   | ['CheckBox15', '显示保存发送', '显示保存发送CheckBox']
+   | child_window(title="显示保存发送", class_name="Button")
+   |
+   | Button - '清空计数'    (L662, T349, R734, B375)
+   | ['清空计数', 'Button18', '清空计数Button']
+   | child_window(title="清空计数", class_name="Button")
+   |
+   | Static - '发送'    (L470, T407, R504, B422)
+   | ['发送Static2', 'Static25', '发送']
+   | child_window(title="发送", class_name="Static")
+   |
+   | Static - '接收'    (L592, T407, R626, B422)
+   | ['接收', '接收Static', 'Static26']
+   | child_window(title="接收", class_name="Static")
+   |
+   | Static - '超时时间'    (L462, T795, R528, B810)
+   | ['超时时间Static', 'Static27', '超时时间']
+   | child_window(title="超时时间", class_name="Static")
+   |
+   | Edit - '5'    (L534, T791, R568, B814)
+   | ['超时时间Edit', 'Edit14']
+   | child_window(title="5", class_name="Edit")
+   |
+   | Static - 's'    (L576, T795, R592, B810)
+   | ['s', 'Static28', 'sStatic']
+   | child_window(title="s", class_name="Static")
+   |
+   | Static - '重发次数'    (L600, T795, R666, B810)
+   | ['重发次数Static', 'Static29', '重发次数']
+   | child_window(title="重发次数", class_name="Static")
+   |
+   | Edit - '1'    (L668, T791, R704, B814)
+   | ['Edit15', '重发次数Edit']
+   | child_window(title="1", class_name="Edit")
+   |
+   | Static - '文件行数'    (L666, T384, R732, B399)
+   | ['文件行数Static', 'Static30', '文件行数']
+   | child_window(title="文件行数", class_name="Static")
+   |
+   | Edit - ''    (L752, T379, R806, B402)
+   | ['文件行数Edit', 'Edit16', '关于程序Edit']
+   | child_window(class_name="Edit")
+   |
+   | Static - '当前发送行'    (L664, T411, R746, B426)
+   | ['当前发送行Static', 'Static31', '当前发送行']
+   | child_window(title="当前发送行", class_name="Static")
+   |
+   | Edit - ''    (L752, T405, R806, B428)
+   | ['Edit17', '当前发送行Edit']
+   | child_window(class_name="Edit")
+-----------------------------------------第一行第二列-----------------------------------------------------------
+   | GroupBox - ''    (L654, T225, R818, B437)
+   | ['发帧数GroupBox', 'GroupBox9']
+   | child_window(class_name="Button")
+   |
+   | Button - '关于程序'    (L736, T349, R808, B375)
+   | ['关于程序Button', 'Button19', '关于程序']
+   | child_window(title="关于程序", class_name="Button")
+-----------------------------------------第四行第一列-----------------------------------------------------------
+   | Button - ''    (L434, T816, R454, B835)
+   | ['Button20', '发送区及发送文件轮发属性Button']
+   | child_window(class_name="Button")
+   |
+   | Static - ''    (L664, T561, R762, B604)
+   | ['Static32', '关键字Static2']
+   | child_window(class_name="Static")
+   |
+   | CheckBox - '只轮发一遍'    (L462, T737, R574, B756)
+   | ['CheckBox16', '只轮发一遍', '只轮发一遍CheckBox']
+   | child_window(title="只轮发一遍", class_name="Button")
+-----------------------------------------第二行第二列-----------------------------------------------------------
+   | Static - ''    (L1284, T583, R1353, B628)
+   | ['Static33', '关键字过滤接收Static', '关键字过滤接收Static0', '关键字过滤接收Static1']
+   | child_window(class_name="Static")
+   |
+   | Static - ''    (L1284, T639, R1353, B684)
+   | ['Static34', '关键字过滤接收Static2']
+   | child_window(class_name="Static")
+   |
+   | Static - ''    (L1378, T639, R1447, B684)
+   | ['串口调试软件4.5Static', 'Static35', '串口调试软件4.5Static0', '串口调试软件4.5Static1']
+   | child_window(class_name="Static")
+   |
+   | Static - ''    (L1378, T583, R1447, B628)
+   | ['串口调试软件4.5Static2', 'Static36']
+   | child_window(class_name="Static")
+   |
+   | Button - 'Button6'    (L736, T489, R808, B513)
+   | ['Button62', 'Button21', 'Button6Button']
+   | child_window(title="Button6", class_name="Button")
+
