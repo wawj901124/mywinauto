@@ -357,7 +357,7 @@ class AutoSelectCom(object):
         ht = HandleSendText(app_windows,edit_control_name,input_text)
         ht.handle_send_text()
 
-    #处理选择发送去1_手动发送编辑内容,waican
+    #处理所有编辑内容,waican
     def handle_receive_text_wai(self):
         app_windows = self.APP_WINDOWS
         # edit_control_name = "Edit"
