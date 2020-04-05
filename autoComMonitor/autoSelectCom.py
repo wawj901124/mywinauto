@@ -8,6 +8,7 @@ from autoComMonitor.common import AutoCommon
 class AutoSelectCom(object):
 
     def __init__(self):
+        self.IS_RESTART = False
         self.EXE_NAME = "ComMonitor.exe"
         self.CHENGXU_NAME = "串口调试软件4.5"
         self.SELECT_COM_NUM = "COM3"
@@ -18,7 +19,10 @@ class AutoSelectCom(object):
 
     # 打开程序
     def start_app(self):
-        app = Application().start(self.EXE_NAME)  # 打开程序
+        if self.IS_RESTART:
+            app = Application().start(self.EXE_NAME)  # 打开程序
+        else:
+            app = Application().connect(path= self.EXE_NAME)
         return app
 
     # 打开程序窗口

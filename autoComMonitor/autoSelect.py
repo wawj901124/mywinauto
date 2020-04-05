@@ -198,7 +198,12 @@ class AutoSelectCom(object):
 
     # 打开程序
     def start_app(self):
-        app = Application().start(self.EXE_NAME)  # 打开程序
+        try:
+            app = Application().connect(path=self.EXE_NAME)   #连接已经启动的应用
+            print("连接已经启动的应用")
+        except:  #如果没有已经启动的应用则启动应用
+            app = Application().start(self.EXE_NAME)  # 打开程序
+            print("新启动应用")
         return app
 
     def get_error_app_windows(self):#打开错误提示弹框
