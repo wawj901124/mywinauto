@@ -3,6 +3,7 @@ import time
 from pywinauto.keyboard import send_keys #对键盘操作
 
 EXE_NAME = "ComMonitor.exe"
+# EXE_NAME = "C:\Windows\System32\cmd.exe"
 CHENGXU_NAME = "串口调试软件4.5"
 SELECT_COM_NUM="COM1"
 
